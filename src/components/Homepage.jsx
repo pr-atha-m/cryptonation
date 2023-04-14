@@ -18,13 +18,10 @@ const Homepage = () => {
   return (
     <>
       <Title level={2}>Global Crypto Stats</Title>
-      <Row>
+      <Row gutter={[8, 8]}>
         <Col span={12}>
           <Card hoverable>
-            <Statistic
-              title="Total Cryptocurrencies"
-              value={millify(stats.total)}
-            />
+            <Statistic title="Cryptocurrencies" value={millify(stats.total)} />
           </Card>
         </Col>
 
