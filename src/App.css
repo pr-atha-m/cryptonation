@@ -223,12 +223,12 @@ a:hover {
   color: var(--pink);
 }
 
-.coin-desc-link h3 {
-  font-weight: 700;
-}
-
 .coin-desc {
   flex: 0.5;
+}
+
+.coin-desc-link h3 {
+  font-weight: 700;
 }
 
 .coin-links {
@@ -374,4 +374,29 @@ a:hover {
   flex-direction: column;
   padding: 20px;
   align-items: center;
+}
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.loader {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #3498db;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

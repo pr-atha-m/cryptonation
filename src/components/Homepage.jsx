@@ -4,6 +4,7 @@ import { Card, Typography, Row, Col, Statistic } from "antd";
 import { Link } from "react-router-dom";
 import { useGetCoinsQuery } from "../services/cryptoRapidApi";
 import { Cryptocurrency, News } from "./";
+import Loader from "./Loader";
 
 const { Title } = Typography;
 
@@ -13,7 +14,7 @@ const Homepage = () => {
   console.log(data);
   console.log(stats);
   if (isFetching) {
-    return "Loading..";
+    return <Loader />;
   }
   return (
     <>
