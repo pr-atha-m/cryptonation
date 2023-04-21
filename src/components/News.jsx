@@ -3,8 +3,10 @@ import { Card, Row, Col, Typography, Avatar, Select } from "antd";
 import { useGetNewsQuery } from "../services/cryptoNewsApi";
 
 import { useGetCoinsQuery } from "../services/cryptoRapidApi";
+import Loader from "./Loader";
 import moment from "moment";
 const { Option } = Select;
+
 const { Text, Title } = Typography;
 
 const demoImage =
@@ -27,7 +29,7 @@ const News = ({ simplified }) => {
   }, [cryptoNews]);
 
   console.log(news);
-  if (isFetching) return "Loading...";
+  if (isFetching) return <Loader />;
 
   return (
     <Row gutter={[24, 24]}>
